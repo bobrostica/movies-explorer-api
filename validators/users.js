@@ -2,7 +2,7 @@ const { celebrate, Joi } = require('celebrate');
 
 const registerUserValidator = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().required().email().max(254),
+    email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
     name: Joi.string().required().min(2).max(30),
   }),
@@ -10,7 +10,7 @@ const registerUserValidator = celebrate({
 
 const loginUserValidator = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().required().email().max(254),
+    email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
   }),
 });
@@ -18,7 +18,7 @@ const loginUserValidator = celebrate({
 const updateUserValidator = celebrate({
   body: Joi.object().keys({
     name: Joi.string().required().min(2).max(30),
-    email: Joi.string().required().email().max(254),
+    email: Joi.string().required().email(),
   }),
 });
 

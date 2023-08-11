@@ -40,6 +40,10 @@ const DEFAULT_ERROR_CODE = 500;
 // Mongodb
 const MONGO_NON_UNIQUE_ERROR_CODE = 11000;
 
+// Validation
+const URL_PATTERN =
+  /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{1,6}\b([-a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=]*)$/;
+
 module.exports = {
   ...exceptionMessages,
   DEFAULT_ERROR_CODE,
@@ -51,4 +55,5 @@ module.exports = {
   MONGO_NON_UNIQUE_ERROR_CODE,
   LIMITER_WINDOW_TIME,
   LIMITER_REQUESTS_COUNT,
+  URL_PATTERN,
 };

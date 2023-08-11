@@ -1,5 +1,7 @@
 const { celebrate, Joi } = require('celebrate');
 
+const { URL_PATTERN } = require('../utils/constants');
+
 const saveMovieValidator = celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
@@ -7,10 +9,10 @@ const saveMovieValidator = celebrate({
     duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().required(),
-    image: Joi.string().uri().required(),
-    trailerLink: Joi.string().uri().required(),
-    thumbnail: Joi.string().uri().required(),
-    movieId: Joi.string().required().hex().length(24),
+    image: Joi.string().pattern(URL_PATTERN).required(),
+    trailerLink: Joi.string().pattern(URL_PATTERN).required(),
+    thumbnail: Joi.string().pattern(URL_PATTERN).required(),
+    movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
   }),
