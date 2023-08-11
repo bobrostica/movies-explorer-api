@@ -30,6 +30,7 @@ const exceptionMessages = {
   FORBIDDEN_DEFAULT_MESSAGE: 'Нет доступа',
   USER_NOT_FOUND_MESSAGE: 'Пользователь не найден',
   MOVIE_NOT_FOUND_MESSAGE: 'Фильм не найден',
+  PAGE_NOT_FOUND_MESSAGE: 'Страница не найдена',
   VALIDATION_DEFAULT_MESSAGE: 'Переданы некорректные данные',
   WRONG_CREDENTIALS_MESSAGE: 'Неправильные почта или пароль',
 };
