@@ -1,11 +1,16 @@
 // CORS
-const allowedCors = ['http://localhost:3000'];
+const allowedCors = [
+  'https://movie-info.nomoreparties.co',
+  'http://movie-info.nomoreparties.co',
+  'http://localhost:3000',
+];
 
 const ALLOWED_METHODS = 'HEAD,GET,PUT,PATCH,POST,DELETE';
 
 const corsOptions = {
   origin: allowedCors,
   methods: ALLOWED_METHODS,
+  credentials: true,
 };
 
 // Rate Limiter
