@@ -1,17 +1,22 @@
 // CORS
-const allowedCors = ['http://localhost:3000'];
+const allowedCors = [
+  'https://movie-info.nomoreparties.co',
+  'http://movie-info.nomoreparties.co',
+  'http://localhost:3000',
+];
 
 const ALLOWED_METHODS = 'HEAD,GET,PUT,PATCH,POST,DELETE';
 
 const corsOptions = {
   origin: allowedCors,
   methods: ALLOWED_METHODS,
+  credentials: true,
 };
 
 // Rate Limiter
 // 100 requests per 15 min.
 const LIMITER_WINDOW_TIME = 15 * 60 * 1000; // 15 min.
-const LIMITER_REQUESTS_COUNT = 100;
+const LIMITER_REQUESTS_COUNT = 1000;
 
 // Token
 // Token age - 7 days: 1000 * 60 * 60 * 24 * 7 = 604800000
